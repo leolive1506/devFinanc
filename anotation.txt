@@ -1,0 +1,59 @@
+Fazer um modal ocupar tela inteira css
+    <div class="modal-overlay active"> <!-- Transparente-->
+        <div class="modal"> <!-- Branca-->
+                Oi
+        </div>
+    </div>
+
+    .modal-overlay {
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.7);
+
+        position: fixed; // libera o top
+        top: 0; // ocupa tela inteira
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // os abaixo fazem sumir da tela
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // quando tiver active aparece de novo
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible 
+    }
+
+    .modal {
+        background: #F0F2f5;
+        padding: 2.4rem;
+    }
+
+
+--------------------------------------------------------------------------------
+
+/* Tirar um label da tela 
+mas os leitores de tela ainda conseguem fazer a leitura */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+--------------------------------------------------------------------------------
+
+Em um input type="number"
+    Por padrão pula de 1 em 1 os números
+    Para alterar usar atributo step
+        ex: step="0.01"
