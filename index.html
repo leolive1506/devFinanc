@@ -30,7 +30,7 @@
                     <span>Entradas</span>
                     <img src="/assets/income.svg" alt="Imagem de Entradas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 0,00</p>
             </div>
 
             <div class="card">
@@ -38,7 +38,7 @@
                     <span>Saída</span>
                     <img src="/assets/expense.svg" alt="Imagem de Saída">
                 </h3>
-                <p>R$ 2.000,00</p>
+                <p id="expenseDisplay">R$ 0,00</p>
             </div>
 
             <div class="card total">
@@ -46,14 +46,16 @@
                     <span>Total</span>
                     <img src="/assets/total.svg" alt="Imagem de Total">
                 </h3>
-                <p>R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
         </section>
 
         <section id="transaction">
             <h2 class="sr-only">transações</h2>
 
-            <a href="#" class="button new">+ Nova Transação</a>
+            <a href="#" class="button new"
+                onclick="modal()"
+            >+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -66,40 +68,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="/assets/minus.svg" alt="Remover trasação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação website</td>
-                        <td class="income">5.0000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="/assets/minus.svg" alt="Remover trasação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="/assets/minus.svg" alt="Remover trasação">
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </section>
     </main>
 
-    <div class="modal-overlay active"> <!-- Transparente-->
+    <div class="modal-overlay"> <!-- Transparente-->
         <div class="modal"> <!-- Branca-->
                 <div id="form">
                     <h2>Nova transação</h2>
-                    <form action="">
+                    <form action="" onsubmit="Form.submit(event)">
                         <div class="input-group">
                             <label class="sr-only" for="description">Descrição</label>
                             <input 
@@ -136,7 +115,9 @@
                         </div>
 
                         <div class="input-group actions">
-                            <a href="#" class="button cancel">Cancelar</a>
+                            <a href="#" 
+                            class="button cancel"
+                            onclick="modal()">Cancelar</a>
                             <button type="submit">Salvar</button>
                         </div>
                     </form>
@@ -147,6 +128,10 @@
     <footer>
         <p>dev.dinance$</p>
     </footer>
+
+    <script src="./scripts.js">
+        
+    </script>
 </body>
 
 </html>

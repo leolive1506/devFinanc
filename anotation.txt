@@ -1,3 +1,7 @@
+Aprender expressão regular
+
+--------------------------------------------------------------------------------
+
 Fazer um modal ocupar tela inteira css
     <div class="modal-overlay active"> <!-- Transparente-->
         <div class="modal"> <!-- Branca-->
@@ -57,3 +61,79 @@ Em um input type="number"
     Por padrão pula de 1 em 1 os números
     Para alterar usar atributo step
         ex: step="0.01"
+
+Tirar opacidade da letra
+    opacity: 0.4
+
+--------------------------------------------------------------------------------
+Quando for tratar dinheiro
+    Não colocar vírgulas nem pontos, simboliza as decimais
+        ex: 500,00 = 50000
+
+-----------------------------------------------------------------------------------------------
+splice()
+    Usa em array
+    espera a posição do array
+    splice(index, quantos elementos deletar em diante)
+
+split()
+    aplicado a string
+    faz separaçõoes em arrays a partir do elemento informado
+    ex: 
+        data recebido de um input -> 2021-02-11
+        split("-")
+            resultado ["2021", "02", "11"]
+
+---------------------------------------------------------------------
+onsubmit
+    executa funções quando enviar o form
+
+    event.preventDefault()
+        Não faça o comportamento padrão, se for um form -> não envia as informações
+
+--------------------------------------------------------------------
+
+trim()
+    serve pra fazer uma limpeza dos espaços vazio de um String
+
+new Error("MSG")
+    Funcionalidade que vai retornar um objeto
+    Tratar com try { tentativa de passos } catch(error) { se der errado algum dos passos será desperado o catch}
+
+--------------------------------------------------------------------
+// selecionar input
+    input: document.querySelector('input#idDesejado')
+
+    // pegar os valores dos inputs
+    getValues() {
+        return {
+            input: Form.input.value
+        }
+    },
+
+    validateFields() {
+        console.log(Form.getValues())
+    },
+
+
+--------------------------------------------------------------------
+localStorage
+    Armazenamento do navegador
+    ver suas propriedades
+        console.log(localStorage)
+
+    setItem
+        dois argumentos
+        guarda string
+        chave e valor
+        1- nome que quer identificar
+            ex localStorage.setItem("dev.finances-transations")
+        2- oq vai guardar nas chaves
+    localStorage.setItem("")
+
+
+-------------------------------------------------------------------
+Transformar array p/ String 
+    JSON.stringify(array)
+String pra array
+    JSON.parse(json)
