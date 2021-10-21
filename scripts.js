@@ -214,7 +214,7 @@ const Form = {
 
     submit(event) {
         event.preventDefault()
-
+        
         try {
             // Verficar se todas as informações foram preenchidas
             Form.validateFields()
@@ -228,14 +228,13 @@ const Form = {
             modal()
             
         } catch (error) {
+
             alert(error.message)
+            
         }
     }
 }
 
-
-// Storage.set("OLaaaaaaaaaaaaa")
-// Storage.get()
 
 const App = {
     init() {
