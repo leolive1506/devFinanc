@@ -1,0 +1,12 @@
+localStorage.setItem("nameIdenticar", valor a ser guardado)
+setItem - identica o nome
+    Sempre guarda o valor em String
+
+localStorage.getItem("nameIdenticar")
+getItem - pega o nome declarado no setItem
+
+Transformar array p string
+    JSON.stringify(array)
+
+Transformar string p array
+    JSON.parse(string)
